@@ -98,6 +98,7 @@ void dump(decode_results *results) {
 
 void loop() {
   if (irrecv.decode(&results)) {
+    Serial.print("Values:")
     Serial.println(results.value);
     dump(&results);
     
